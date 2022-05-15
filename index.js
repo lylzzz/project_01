@@ -30,3 +30,29 @@
 // 只移除仓库里的文件，保留工作区的文件：git rm --cached 你要移除的文件
 
 // .gitignore 忽略文件
+
+// 在使用https 协议去推送的时候，可能会出现问题
+// 1.正常会弹出账号和密码的输入框（只有一次输入机会）
+// 如果输入错误，需要自行去 控制面板\用户账户\凭据管理器，把对应网站里面记录的登录信息移除掉
+
+// 账号和密码正确的前提下，还需要生成一个个人的登录 token（2021813，七夕节）
+// 七夕的前一天，Github不支持个人密码认证，都要使用personal access token（个人访问令牌）认证。
+
+// 查看本地工程关联的远程仓库是哪个：git remote -v
+
+// 1. git remote add origin https://github.com/lylzzz/project_01.git
+// remote：表示远程的意思
+// add：添加
+// origin：就是后面的git地址的别名
+// 远程仓库的地址：https://github.com/lyzzz/project_01.git
+
+// 2. git branch -M main（把默认的master分支名改成了main）
+
+
+// 3. git push -u origin main，表示第一次本次存储朝远程仓库提交的时候，必须这么写
+// push：表示推送的意思
+// -u：表示第一次推送的时候，必须加 -u 参数
+// origin：就是表示你要把工程往哪推，这个名字代表的地址就是你要推送的地址
+// main：表示上面那个地址所有的某一个点（房间，分支）
+
+// 4.除第一次以外再修改代码需要再次提交的时候，只需要走 git push 就可以让本地仓库最新的代码推送到远程的git仓库中了
